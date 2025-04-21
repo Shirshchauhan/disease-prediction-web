@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disease Prediction Form</title>
+</head>
+<body>
+    <h1>Enter Disease Prediction Data</h1>
+    <form action="/predict" method="post">
+        <label for="fever">Fever (yes/no):</label>
+        <input type="text" id="fever" name="fever" required><br><br>
+
+        <label for="heartRate">Heart Rate:</label>
+        <input type="number" id="heartRate" name="heartRate" required><br><br>
+
+        <label for="glucose">Glucose:</label>
+        <input type="number" id="glucose" name="glucose" required><br><br>
+
+        <label for="bloodPressure">Blood Pressure:</label>
+        <input type="number" id="bloodPressure" name="bloodPressure" required><br><br>
+
+        <label for="skinThickness">Skin Thickness:</label>
+        <input type="number" id="skinThickness" name="skinThickness" required><br><br>
+
+        <label for="insulin">Insulin:</label>
+        <input type="number" id="insulin" name="insulin" required><br><br>
+
+        <label for="bmi">BMI:</label>
+        <input type="number" id="bmi" name="bmi" required><br><br>
+
+        <label for="diabetesPedigreeFunction">Diabetes Pedigree Function:</label>
+        <input type="number" step="0.01" id="diabetesPedigreeFunction" name="diabetesPedigreeFunction" required><br><br>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required><br><br>
+
+        <label for="cholesterol">Cholesterol:</label>
+        <input type="number" id="cholesterol" name="cholesterol" required><br><br>
+
+        <label for="oxygen">Oxygen Level:</label>
+        <input type="number" id="oxygen" name="oxygen" required><br><br>
+
+        <label for="respRate">Respiratory Rate:</label>
+        <input type="number" id="respRate" name="respRate" required><br><br>
+
+        <label for="symptomScore">Symptom Score:</label>
+        <input type="number" id="symptomScore" name="symptomScore" required><br><br>
+
+        <label for="bloodGroup">Blood Group:</label>
+        <select id="bloodGroup" name="bloodGroup" required>
+            <option value="">--Select--</option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="AB">AB</option>
+            <option value="O">O</option>
+        </select><br><br>
+
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>

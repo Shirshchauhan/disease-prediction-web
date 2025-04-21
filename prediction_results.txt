@@ -1,0 +1,17 @@
+=== Prediction at 2025-04-21 12:31:06 ===
+Attr1: 575.0
+Attr2: 65.0
+Attr3: 56.0
+Attr4: 46.0
+Attr5: 255.0
+Attr6: 1.0
+Attr7: 55.0
+Attr8: 255.0
+Attr9: 55.0
+Attr10: 555.0
+Attr11: 78.0
+Attr12: 55.0
+Attr13: 22.0
+Blood Group: B
+Prediction: tested_negative
+
