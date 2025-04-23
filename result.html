@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="/css/style.css"> <!-- If you have an external CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #f5f7fa, #c3cfe2);
+            padding: 30px;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        .result-box {
+            margin: 30px auto;
+            padding: 20px;
+            border-radius: 10px;
+            width: 60%;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .positive {
+            color: red;
+            font-weight: bold;
+        }
+        .negative {
+            color: green;
+            font-weight: bold;
+        }
+        .error {
+            color: crimson;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Prediction Result</h1>
+
+    <div class="result-box">
+        <p class="${prediction == 'tested_positive' ? 'positive' : 'negative'}">
+            Prediction: <strong th:text="${prediction}">Prediction will appear here</strong>
+        </p>
+
+        <p class="error" th:text="${error}"></p>
+
+        <a href="/prediction">← Back to Form</a>
+    </div>
+</body>
+</html>

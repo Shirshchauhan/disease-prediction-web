@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disease Prediction Form</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #a8edea, #fed6e3);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        form {
+            background-color: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            max-width: 600px;
+            width: 100%;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            margin: 12px 0 5px;
+            color: #34495e;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px 12px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 15px;
+        }
+
+        input[type="submit"] {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <form action="/predict" method="post">
+        <h1>Enter Disease Prediction Data</h1>
+        
+        <!-- Add min/max range for numeric inputs to limit values -->
+        <label for="sugar">Sugar:</label>
+        <input type="number" id="sugar" name="sugar" required min="0" step="0.01"><br><br>
+
+        <label for="cholesterol">Cholesterol:</label>
+        <input type="number" id="cholesterol" name="cholesterol" required min="0" step="0.01"><br><br>
+
+        <label for="urine">Urine:</label>
+        <input type="number" id="urine" name="urine" required min="0" step="0.01"><br><br>
+
+        <label for="wbc">WBC:</label>
+        <input type="number" id="wbc" name="wbc" required min="0" step="0.01"><br><br>
+
+        <label for="hemoglobin">Hemoglobin:</label>
+        <input type="number" id="hemoglobin" name="hemoglobin" required min="0" step="0.01"><br><br>
+
+        <label for="fasting_sugar">Fasting Sugar:</label>
+        <input type="number" id="fasting_sugar" name="fasting_sugar" required min="0" step="0.01"><br><br>
+
+        <label for="cbc">CBC:</label>
+        <input type="number" id="cbc" name="cbc" required min="0" step="0.01"><br><br>
+
+        <label for="liquid_profile">Liquid Profile:</label>
+        <input type="number" id="liquid_profile" name="liquid_profile" required min="0" step="0.01"><br><br>
+
+        <label for="liquid_function_test">Liquid Function Test:</label>
+        <input type="number" id="liquid_function_test" name="liquid_function_test" required min="0" step="0.01"><br><br>
+
+        <label for="kidney_function_test">Kidney Function Test:</label>
+        <input type="number" id="kidney_function_test" name="kidney_function_test" required min="0" step="0.01"><br><br>
+
+        <label for="uric_acid">Uric Acid:</label>
+        <input type="number" id="uric_acid" name="uric_acid" required min="0" step="0.01"><br><br>
+
+        <label for="b12">B12:</label>
+        <input type="number" id="b12" name="b12" required min="0" step="0.01"><br><br>
+
+        <label for="calcium">Calcium:</label>
+        <input type="number" id="calcium" name="calcium" required min="0" step="0.01"><br><br>
+
+        <label for="crp">CRP:</label>
+        <input type="number" id="crp" name="crp" required min="0" step="0.01"><br><br>
+
+        <label for="blood_group">Blood Group:</label>
+        <select id="blood_group" name="blood_group" required>
+            <option value="">--Select--</option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="AB">AB</option>
+            <option value="O">O</option>
+        </select><br><br>
+
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
